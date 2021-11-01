@@ -7,7 +7,7 @@ app.config['SECRET_KEY'] = 'changeme'
 
 @app.route("/")
 def index():
-  return render_template("home.html")
+  return render_template("index.html")
 
 
 
@@ -131,7 +131,7 @@ def sign_up():
     name = request.form['Name']
     password = request.form['Password']
     add_user(name, password)
-    return render_template("quiz.html",name=name)
+    return render_template("home.html",name=name)
 
 
 @app.route('/Log_in', methods=['GET', 'POST'])
